@@ -1,0 +1,57 @@
+/* Estilos para el XML */
+modulo {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+modulo > nombre {
+    color: #2a9d8f;
+    font-weight: bold;
+}
+
+modulo > horas_semanales, 
+modulo > caracter, 
+modulo > fecha_inicio, 
+modulo > fecha_fin {
+    color: #264653;
+}
+
+alumnos {
+    margin-top: 20px;
+}
+
+alumno {
+    border: 1px solid #e9c46a;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f4a261;
+}
+
+alumno > nombre {
+    color: #e76f51;
+    font-weight: bold;
+}
+
+alumno > apellidos, 
+alumno > dni, 
+alumno > telefono, 
+alumno > email, 
+alumno > direccion > calle, 
+alumno > direccion > numero, 
+alumno > direccion > ciudad, 
+alumno > direccion > codigo_postal, 
+alumno > faltas_asistencia, 
+alumno > nota {
+    color: #264653;
+}
+
+alumno > direccion {
+    margin-left: 10px;
+}
+
+direccion > calle, 
+direccion > numero, 
+direccion > ciudad, 
+direccion > codigo_postal {
+    color: #2a9d8f;
+}

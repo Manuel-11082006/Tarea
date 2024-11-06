@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<agenda>
+    <persona>
+        <nombre>Juan</nombre>
+        <apellidos>Pérez García</apellidos>
+        <direccion>
+            <calle>Calle X</calle>
+            <numero>123</numero>
+            <ciudad>El Puerto de Santa María</ciudad>
+            <codigoPostal>11500</codigoPostal>
+        </direccion>
+        <telefonos>
+            <casa>912345678</casa>
+            <movil>612345678</movil>
+            <trabajo>915678123</trabajo>
+        </telefonos>
+    </persona>
+</agenda>

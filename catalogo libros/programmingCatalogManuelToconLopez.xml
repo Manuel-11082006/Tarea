@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="styles.css"?>
+   <catalogo>
+		<libro>
+			<titulo>Don Quijote De La Mancha</titulo>
+			<autor>Miguel De Cervantes</autor>
+			<creacion>1615</creacion>
+			<editorial>Savedra</editorial>
+		</libro>
+		<libro>
+			<titulo>El Diario de Ana Frank</titulo>
+			<autor>Ana Frank</autor>
+			<creacion>1947</creacion>
+			<editorial>Susaeta</editorial>
+		</libro>
+		<libro>
+			<titulo>Cien Años de Soledad</titulo>
+			<autor>Gabriel García Márquez</autor>
+			<creacion>1967</creacion>
+			<editorial>Debolsillo</editorial>
+		</libro>
+	</catalogo>
+	
