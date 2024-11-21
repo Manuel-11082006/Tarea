@@ -94,12 +94,53 @@
     </ul>
 </main>
 <main>
+    <h2>Datos Personales</h2>
+    <form id="datospersonalesForm">
+        <label for="firstName">Nombre:</label>label><br>
+        <input type="text" id="firtsName" name="firstname" required><br><br>
+        <label for="lastName">Apellido:</label><br>
+        <input type="text" id="lastName" name="lastName" required><br><br>
+
+        <label for="age">Edad:</label><br>
+        <input type="number" id="age" name="age" required><br><br>
+
+        <label for="email">Correo Electrónico:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label>Te gusta mi app?</label><br>
+        <input type="radio" id="like1" name="feedback" value="Me gusta mucho" onclick="clearOtherSelections('like1')"> Me gusta mucho<br>
+        <input type="radio" id="like2" name="feedback" value="Está bien" onclick="clearOtherSelections('like2')"> Está bien<br>
+        <input type="radio" id="like3" name="feedback" value="No está del todo mal" onclick="clearOtherSelections('like3')"> No está del todo mal<br>
+        <input type="radio" id="like4" name="feedback" value="Está mal" onclick="clearOtherSelections('like4')"> Está mal<br>
+        <input type="radio" id="like5" name="feedback" value="Dedícate a otra cosa máquina" onclick="clearOtherSelections('like5')"> Dedícate a otra cosa máquina<br><br>
+
+        <button type="submit">Enviar Formulario</button>
+    </form>
+</main>
+
+    
+<main>
     <iframe weight= "220" lenght= "120" src="https://www.motogp.com/es">title= Página Moto GP</iframe>
 </main>
 
 <footer>
-    <p>&copy; 2024 Mi Nombre - Todos los derechos reservados</p>
+    <p>&copy; Lenguaje de Marcas 24/25 - 1º DAW </p>
 </footer>
+    <script>
+    function clearOtherSelections(currentSelection) {
+        const radios = document.getElementsByName("formulario");
+        for (let i = 0; i < radios.length; i++) {
+            if (radios[i].id !== currentSelection) {
+                radios[i].checked = false;
+            }
+        }
+    }
+
+    document.getElementById("feedbackForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+        alert("Formulario enviado correctamente!");
+    });
+</script>
 
 </body>
 </html>
