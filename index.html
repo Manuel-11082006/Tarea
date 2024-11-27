@@ -4,64 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mis Tareas y Proyectos</title>
-    <style>
+   <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
             margin: 0;
             padding: 0;
+            background-color: #f0f8ff;
             color: #333;
+            line-height: 1.6;
         }
         header {
-            background-color: #4CAF50;
-            color: white;
+            background-color: #0077b6;
+            color: #fff;
+            text-align: center;
+            padding: 8px;
+            font-size: 1.15rem; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-bottom: 4px solid #00b4d8;
+        }
+        main {
             padding: 20px;
-            text-align: center;
-        }
-        h1 {
-            margin: 0;
-        }
-        nav {
-            text-align: center;
-            margin-top: 20px;
-        }
-        nav a {
-            text-decoration: none;
-            color: #4CAF50;
-            padding: 10px 20px;
-            margin: 10px;
-            border: 2px solid #4CAF50;
-            border-radius: 5px;
-            transition: background-color 0.3s, color 0.3s;
-        }
-        nav a:hover {
-            background-color: #4CAF50;
-            color: white;
-        }
-        section {
-            margin: 20px;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
         }
         .tema {
-            margin-top: 40px;
+            margin-top: 0; 
+            margin-bottom: 20px;
         }
-        .tarea {
-            margin: 15px 0;
+        .tema h2 {
+            background-color: #48cae4;
+            padding: 10px;
+            border-radius: 8px;
+            margin: 0;
+            text-align: center;
+            font-size: 1.4rem;
         }
-        .tarea a {
-            font-weight: bold;
+        .actividad {
+            background-color: #e0f7fa;
+            border: 1px solid #0077b6;
+            padding: 10px 15px; 
+            margin-top: 10px;
+            border-radius: 10px;
+            box-shadow: none;
+            transition: transform 0.1s ease; 
+        }
+        .actividad:hover {
+            transform: translateY(-2px); 
+        }
+        .actividad h3 {
+            color: #0077b6;
+            font-size: 1.2rem;
+            margin: 0; 
+        }
+        .actividad p {
+            font-size: 1rem;
+            color: #555;
+            margin: 0; 
+        }
+        footer {
+            background-color: #0077b6;
+            color: #fff;
+            text-align: center;
+            padding: 8px;
+            font-size: 0.9rem;
         }
     </style>
 </head>
@@ -73,9 +76,12 @@
 </header>
 
 <main>
-  <h2>Ejercicios Tema 1</h2>
+
+ <section> id= "Tema 1" class= "Tema">
+    <h2>Ejercicios Tema 1</h2>
 <ul>
-  <li><a href="XML/animales.xml">Ejercicio Animales XML</a></li>
+     <div class= "Actividad"> 
+    <li><a href="XML/animales.xml">Ejercicio Animales XML</a></li>
     <li><a href="ejercicio 2,3 y 4/ejercicio 2.xml">Ejercicio 2 XML</a></li>
    <li><a href="ejercicio 2,3 y 4/ejercicio3.xml">Ejercicio 3 XML</a></li>
      <li><a href="ejercicio 2,3 y 4/ejercicio 4.xml">Ejercicio 4 XML</a></li>
@@ -83,14 +89,18 @@
      <li><a href="ejercicio 2,3 y 4/ejercicio4,2.xml">Ejercicio 4.2 XML</a></li>
      <li><a href="Hardware Catalogo tabla/hardwareCatalogManuelTocónLópez.xml">Ejercicio Cátalogo Hardware XML</a></li>
       <li><a href="catalogo libros/programmingCatalogManuelToconLopez.xml">Ejercicio Catálogo Animales XML</a></li>
+ </section>
+     </div>
 </ul>
-</main>
-<main>
+
+   <section> id= "Tema 2" class= "Tema">
     <h2>Ejercicios Tema 2</h2>
     <ul>
-          <li><a href="HTML/Github yil/ejercicioListaMódulo.html">Ejercicio Lista de Módulos</a></li>
+          <div class= "Actividad"> 
+        <li><a href="HTML/Github yil/ejercicioListaMódulo.html">Ejercicio Lista de Módulos</a></li>
         <li><a href="Tabla de horarios.html">Tabla de horarios</a></li>
-    
+         </section>
+          </div>
     </ul>
 </main>
  <main>
