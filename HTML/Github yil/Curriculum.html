@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Currículum</title>
-<style>
+  <style>
         /* Estilos generales del cuerpo */
         body {
             font-family: Arial, sans-serif;
@@ -13,6 +13,8 @@
             margin: 0;
             padding: 0;
             display: flex; /* Para alinear la barra lateral a la izquierda */
+            flex-direction: column; /* Asegura que los elementos se apilen verticalmente */
+            min-height: 100vh; /* Garantiza que la altura mínima de la página sea el 100% de la pantalla */
         }
 
         header {
@@ -109,9 +111,8 @@
             color: white;
             text-align: center;
             padding: 20px;
-            position: relative;
-            bottom: 0;
-            width: 100%;
+            width: 100%; /* Se asegura que el footer ocupe todo el ancho */
+            margin-top: auto; /* Empuja el footer hacia abajo */
         }
 
         footer p {
