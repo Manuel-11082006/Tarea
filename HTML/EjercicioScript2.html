@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números Pares e Impares</title>
+    <script>
+        function leerNumeros() {
+            let numeros = [];
+            let num;
+            
+            while (true) {
+                num = prompt("Introduce un número (0 o texto para salir):");
+                if (isNaN(num) || num == "0") {
+                    break;
+                }
+                numeros.push(parseInt(num));
+            }
+            
+            let pares = numeros.filter(n => n % 2 === 0).length;
+            let impares = numeros.length - pares;
+            
+            document.getElementById("resultado").innerText = "Array de entrada: " + JSON.stringify(numeros) + "\nPares: " + pares + "\nImpares: " + impares;
+        }
+    </script>
+</head>
+<body>
+    <h2>Contador de Pares e Impares</h2>
+    <button onclick="leerNumeros()">Iniciar</button>
+    <p id="resultado"></p>
+</body>
+</html>
