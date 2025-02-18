@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sumatorio de Vector</title>
+    <script>
+        function calcularSumatorio() {
+            let numeros = [];
+            let sumatorio = 0;
+            
+            // Generar el vector con 100 números aleatorios entre 1 y 100
+            for (let i = 0; i < 100; i++) {
+                let num = Math.floor(Math.random() * 100) + 1;
+                numeros.push(num);
+                sumatorio += num;
+            }
+            
+            document.getElementById("resultado").innerText = "Sumatorio: " + sumatorio;
+        }
+    </script>
+</head>
+<body>
+    <h2>Calculadora de Sumatorio</h2>
+    <button onclick="calcularSumatorio()">Calcular</button>
+    <p id="resultado"></p>
+</body>
+</html>
