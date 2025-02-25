@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vectores</title>
+</head>
+<body>
+  <h2>Operaciones con vectores</h2>
+
+  <script>
+   
+    var entrada = prompt("Ingrese los números del vector separados por comas (ej: 5,10,2):");
+
+
+    var vector = entrada.split(',').map(Number);
+
+    
+    var suma = vector.reduce((a, b) => a + b, 0);
+
+    
+    var multiplicacion = vector.reduce((a, b) => a * b, 1);
+
+    
+    var maximo = Math.max(...vector);
+    var minimo = Math.min(...vector);
+
+    
+    document.write("<p><strong>Vector:</strong> [" + vector + "]</p>");
+    document.write("<p><strong>Suma:</strong> " + suma + "</p>");
+    document.write("<p><strong>Multiplicación:</strong> " + multiplicacion + "</p>");
+    document.write("<p><strong>Máximo:</strong> " + maximo + "</p>");
+    document.write("<p><strong>Mínimo:</strong> " + minimo + "</p>");
+  </script>
+
+</body>
+</html>
