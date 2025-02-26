@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vectores</title>
+</head>
+<body>
+  <h2>Operaciones con vectores</h2>
+
+  <script>
+    //Para pedir al usuario que ingrese los números
+    var entrada = prompt("Ingrese los números del vector separados por comas (ej: 5,10,2):");
+    var vector = entrada.split(','); 
+    //Las variables para las operaciones
+    var suma = 0;
+    var multiplicacion = 1;
+    var maximo = Number(vector[0]);
+    var minimo = Number(vector[0]);
+    var pares = 0;
+    var impares = 0;
+
+    var i = 0;
+    //Recorre el array con el while
+    while (i < vector.length) {
+      var numero = Number(vector[i]);
+
+      suma = suma + numero;
+      multiplicacion = multiplicacion * numero;
+
+      //Para encontrar el máximo y mínimo
+      if (numero > maximo) {
+        maximo = numero;
+      }
+      if (numero < minimo) {
+        minimo = numero;
+      }
+
+      //Para contar pares e impares
+      if (numero % 2 === 0) {
+        pares = pares + 1;
+      } else {
+        impares = impares + 1;
+      }
+      //Para avanzar al siguiente número
+      i = i + 1; 
+    }
+    //Para mostar el resultado en la página
+    document.write("<p><strong>Vector:</strong> [" + vector.join(", ") + "]</p>");
+    document.write("<p><strong>Suma:</strong> " + suma + "</p>");
+    document.write("<p><strong>Multiplicación:</strong> " + multiplicacion + "</p>");
+    document.write("<p><strong>Máximo:</strong> " + maximo + "</p>");
+    document.write("<p><strong>Mínimo:</strong> " + minimo + "</p>");
+    document.write("<p><strong>Cantidad de números pares:</strong> " + pares + "</p>");
+    document.write("<p><strong>Cantidad de números impares:</strong> " + impares + "</p>");
+  </script>
+
+</body>
+</html>
