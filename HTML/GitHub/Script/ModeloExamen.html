@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio con párrafos y botones</title>
+    <link rel="stylesheet" href="ModeloExamen.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    
+</head>
+<body>
+
+    <p class="par par-impar">Párrafo 1 </p>
+    <p class="par par-par">Párrafo 2 </p>
+    <p class="par par-impar">Párrafo 3 </p>
+    <p class="par par-par">Párrafo 4 </p>
+
+    <button id="ocultarPares">Ocultar pares</button>
+    <button id="ocultarImpares">Ocultar impares</button>
+    <button id="mostrarPares">Mostrar pares</button>
+    <button id="mostrarImpares">Mostrar impares</button>
+
+    
+
+    <script>
+        $(document).ready(function() {
+            $("#ocultarPares").click(function() {
+                $(".par-par").hide();
+            });
+
+            $("#ocultarImpares").click(function() {
+                $(".par-impar").hide();
+            });
+
+            $("#mostrarPares").click(function() {
+                $(".par-par").show();
+            });
+
+            $("#mostrarImpares").click(function() {
+                $(".par-impar").show();
+            });
+
+          
+        });
+    </script>
+
+</body>
+</html>
