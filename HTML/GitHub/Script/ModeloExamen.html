@@ -1,48 +1,34 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio con párrafos y botones</title>
-    <link rel="stylesheet" href="ModeloExamen.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Document</title>
 </head>
 <body>
-
-    <p class="par par-impar">Párrafo 1 </p>
-    <p class="par par-par">Párrafo 2 </p>
-    <p class="par par-impar">Párrafo 3 </p>
-    <p class="par par-par">Párrafo 4 </p>
-
-    <button id="ocultarPares">Ocultar pares</button>
-    <button id="ocultarImpares">Ocultar impares</button>
-    <button id="mostrarPares">Mostrar pares</button>
-    <button id="mostrarImpares">Mostrar impares</button>
-
     
+    <p class="impar">Parrafo 1</p>
+    <p class="par">Parrafo 2</p>
+    <p class="impar">Parrafo 3</p>
+    <p class="par">Parrafo 4</p>
+
+    <button type="button" onclick='ocultar("impar")'>Ocultar impares</button>
+    <button type="button" onclick='mostrar("impar")'>Mostrar impares</button>
+
+    <button type="button" onclick='ocultar("par")'>Ocultar pares</button>
+    <button type="button" onclick='mostrar("par")'>Mostrar pares</button>
 
     <script>
-        $(document).ready(function() {
-            $("#ocultarPares").click(function() {
-                $(".par-par").hide();
-            });
+        function mostrar(clase) {
+        let elementos= document.querySelectorAll("." + clase)
+        elementos.forEach(elementos => elementos.style.display="block")
+        }
 
-            $("#ocultarImpares").click(function() {
-                $(".par-impar").hide();
-            });
-
-            $("#mostrarPares").click(function() {
-                $(".par-par").show();
-            });
-
-            $("#mostrarImpares").click(function() {
-                $(".par-impar").show();
-            });
-
-          
-        });
+        function ocultar(clase) {
+        let elementos= document.querySelectorAll("." + clase)
+        elementos.forEach(elementos => elementos.style.display="none")
+        }
     </script>
-
 </body>
 </html>
