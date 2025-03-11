@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <title>Document</title>
+    <script src="C:\Users\manue\OneDrive\Documentos\Lenguuaje de Marcas\jquery.js"></script>
 </head>
 <body>
     
@@ -13,22 +13,36 @@
     <p class="impar">Parrafo 3</p>
     <p class="par">Parrafo 4</p>
 
-    <button type="button" onclick='ocultar("impar")'>Ocultar impares</button>
-    <button type="button" onclick='mostrar("impar")'>Mostrar impares</button>
+    <button id="mostrar">Mostrar pares</button>
+    <button id="ocultar">Ocultar pares</button>
 
-    <button type="button" onclick='ocultar("par")'>Ocultar pares</button>
-    <button type="button" onclick='mostrar("par")'>Mostrar pares</button>
+    <button id="mostrarim">Mostrar impares</button>
+    <button id="ocultarim">Ocultar impares</button>
 
     <script>
-        function mostrar(clase) {
-        let elementos= document.querySelectorAll("." + clase)
-        elementos.forEach(elementos => elementos.style.display="block")
-        }
+        $(document).ready(function() {
+           $("#mostrar").click (function(){
+                $(".par").show();
+           });
+        });
 
-        function ocultar(clase) {
-        let elementos= document.querySelectorAll("." + clase)
-        elementos.forEach(elementos => elementos.style.display="none")
-        }
+        
+           $("#ocultar").click (function(){
+                $(".par").hide();
+           });
+       
+
+       
+           $("#mostrarim").click (function(){
+                $(".impar").show();
+           });
+      
+
+       
+           $("#ocultarim").click (function(){
+                $(".impar").hide();
+           });
+     
     </script>
 </body>
 </html>
