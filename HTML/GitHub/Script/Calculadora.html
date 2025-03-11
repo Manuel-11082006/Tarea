@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora Simple</title>
+</head>
+<body>
+
+    <h2>Calculadora</h2>
+    
+    <input type="number" id="num1">
+    <select id="operacion">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">×</option>
+        <option value="/">÷</option>
+    </select>
+    <input type="number" id="num2">
+    
+    <button id="calcular">=</button>
+    <span id="resultado">0</span>
+
+    <script>
+        // Capturamos el botón y le añadimos un evento
+        document.getElementById("calcular").addEventListener("click", function() {
+            // Obtenemos los valores de los inputs
+            var num1 = parseFloat(document.getElementById("num1").value);
+            var num2 = parseFloat(document.getElementById("num2").value);
+            var operacion = document.getElementById("operacion").value;
+            var resultado;
+
+            // Verificamos que los valores sean números
+            if (isNaN(num1) || isNaN(num2)) {
+                resultado = "Error: Ingresa números válidos";
+            } else {
+                // Realizamos la operación
+                switch (operacion) {
+                    case "+": resultado = num1 + num2; break;
+                    case "-": resultado = num1 - num2; break;
+                    case "*": resultado = num1 * num2; break;
+                    case "/": 
+                        resultado = (num2 !== 0) ? num1 / num2 : "Error: División por 0";
+                        break;
+                }
+            }
+
+            // Mostramos el resultado en la página
+            document.getElementById("resultado").textContent = resultado;
+        });
+    </script>
+
+</body>
+</html>
