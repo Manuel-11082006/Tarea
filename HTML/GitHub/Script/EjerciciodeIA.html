@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moto</title>
+   
+</head>
+<body>
+    <div class="container">
+        <h2>Selecciona las características de la moto</h2>
+        
+        <label for="cilindrada">Tipo de Cilindrada:</label>
+        <select id="cilindrada">
+            <option value="125">125</option>
+            <option value="250">250</option>
+            <option value="500">500</option>
+            <option value="500+">500+</option>
+        </select>
+        <br>
+
+        <label for="combustion">Tipo de combustión:</label>
+        <select id="combustion">
+            <option value="2">2 tiempos</option>
+            <option value="4">4 tiempos</option>
+        </select>
+        <br>
+
+        <label for="combustible">Tipo de combustible:</label>
+        <select id="combustible">
+            <option value="gasolina">Gasolina</option>
+            <option value="electrico">Eléctrico</option>
+        </select>
+        <br>
+
+        <label for="color">Color de la moto:</label>
+        <select id="color">
+            <option value="rojo">Rojo</option>
+            <option value="azul">Azul</option>
+            <option value="negro">Negro</option>
+            <option value="blanco">Blanco</option>
+        </select>
+        <br>
+
+        <label for="frenos">Tipo de frenos:</label>
+        <select id="frenos">
+            <option value="disco">Disco</option>
+            <option value="tambor">Tambor</option>
+        </select>
+        <br>
+
+        <label>Accesorios:</label>
+        <br>
+        <input type="checkbox" id="baul" value="Baúl"> Baúl
+        <input type="checkbox" id="parabrisas" value="Parabrisas"> Parabrisas
+        <br>
+
+        <button onclick="mostrarSeleccion()">Confirmar selección</button>
+        <button onclick="resetearSeleccion()">Restablecer</button>
+        
+        <h3 id="resultado"></h3>
+    </div>
+   
+    <script>
+        function mostrarSeleccion() {
+            var cilindrada = document.getElementById("cilindrada").value;
+            var combustion = document.getElementById("combustion").value;
+            var combustible = document.getElementById("combustible").value;
+            var color = document.getElementById("color").value;
+            var frenos = document.getElementById("frenos").value;
+            
+            var accesorios = [];
+            if (document.getElementById("baul").checked) accesorios.push("Baúl");
+            if (document.getElementById("parabrisas").checked) accesorios.push("Parabrisas");
+            
+            var mensaje = "Has seleccionado una moto con cilindrada: " + cilindrada + ", " + combustion + " tiempos, " +
+                          "funciona con " + combustible + ", es de color " + color + " y tiene frenos de tipo " + frenos + ".";
+            
+            if (accesorios.length > 0) {
+                mensaje += " Además, cuenta con los siguientes accesorios: " + accesorios.join(", ") + ".";
+            }
+            
+            document.getElementById("resultado").innerText = mensaje;
+        }
+
+        function resetearSeleccion() {
+            document.getElementById("cilindrada").value = "125";
+            document.getElementById("combustion").value = "2";
+            document.getElementById("combustible").value = "gasolina";
+            document.getElementById("color").value = "rojo";
+            document.getElementById("frenos").value = "disco";
+            document.getElementById("baul").checked = false;
+            document.getElementById("parabrisas").checked = false;
+            document.getElementById("resultado").innerText = "";
+        }
+    </script>
+</body>
+</html>
